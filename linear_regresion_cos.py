@@ -41,6 +41,11 @@ print('Сумма ошибок на тестовых данных =', mean_squar
 # Сумма ошибок на тренировочных данных = 30.03398645088782
 # Сумма ошибок на тестовых данных = 32.34520984726374
 
+from sklearn.metrics import r2_score
+
+print('R^2 на тренировочных данных =', r2_score(y_train, pred_train))
+print('R^2 на тестовых данных =', r2_score(y_test, pred_test))
+
 plt.figure(figsize=(20, 5))
 plt.scatter(data_train['dayofyear'], y_train, label='Train y(x)')
 plt.scatter(data_test['dayofyear'], y_test, label='Test y(x)')
